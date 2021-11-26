@@ -42,30 +42,38 @@
                         <input type="email" name="email" id="email" required>
                     </div>
                     <div class="phone">
-                        <label for="phone"><strong>Phone*</strong></label>
-                        <input type="phone" name="phone" id="phone" required>
+                        <label for="phone"><strong>Phone</strong></label>
+                        <input type="phone" name="phone" id="phone" pattern="[0-9]">
                     </div>
                 </div>
                 <div class="password">
-                        <label for="password"><strong>Password*</strong>
-                            <input type="password" name="password" id="password" required>
-                        </label>
-                        <label for="re-password"><strong>Re-enter password*</strong>
-                            <input type="password" name="re-password" id="re-password" minlength="4" maxlength="4" required>
-                        </label>
-                        
-                    
+                    <label for="password"><strong>Password*</strong>
+                        <input type="password" name="password" id="password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="10" required>
+                    </label>
+                    <label for="re-password"><strong>Re-enter password*</strong>
+                        <input type="password" name="re-password" id="re-password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" minlength="10" required>
+                    </label>
                 </div>
 
                 <section class="newsletter">
                     <p>I want to sign-up for the newsletter</p>
-                    <div class="shippment">
-                        <label for="ship-address"><strong>Shipping address</strong>
-                            <input type="checkbox" name="ship-address" id="ship-address" checked>
+                    <div class="news">
+                        <label for="newsletter"><strong>Weekly news</strong>
+                            <input type="radio" name="newsletter" value="weekly" checked>
                         </label>
-                        <button class="button" type="submit"><strong>Next step</strong></button>
+                        <label for="newsletter"><strong>Monthly news</strong>
+                            <input type="radio" name="newsletter" value="monthly">
+                        </label>
+                        <label for="newsletter"><strong>Don't send me news</strong>
+                            <input type="radio" name="newsletter" value="don't">
+                        </label>
                     </div>
-
+                    
+                        <button class="button" type="submit" style="float: right;"><strong>Next step</strong></button>
+                    
+                </section>
             </form>
 
         </section>
